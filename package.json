@@ -1,0 +1,21 @@
+{
+    "name": "node-ts-mysql",
+    "version": "0.1.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Carlos Salega",
+    "license": "MIT",
+    "devDependencies": {
+        "tslint": "^6.1.3",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2"
+    }
+}
