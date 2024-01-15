@@ -1,3 +1,4 @@
+import cors from "cors";
 import express, { Application } from "express";
 import userRoutes from "../routes/user.route";
 
@@ -8,10 +9,22 @@ class Server {
         users: "/api/users",
     };
 
+    /**
+     * Server constructor.
+     * Initializes the Express app, sets the port,
+     * calls middlewares and routes methods.
+     */
     constructor() {
         this.app = express();
         this.port = process.env.PORT || "8000";
+        this.middlewares();
         this.routes();
+    }
+
+    middlewares() {
+        this.app.use(cors());
+        this.app.use(express.json());
+        this.app.use(express.static("public"));
     }
 
     routes() {
